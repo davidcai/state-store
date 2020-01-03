@@ -4,7 +4,8 @@ import { IStoreProps } from "./types";
 
 function createStore<S, A>(
   name: string,
-  reducer: React.Reducer<S, A>
+  reducer: React.Reducer<S, A>,
+  defaultState: S
 ): [
   React.FunctionComponent<IStoreProps<S, A>>,
   () => S,
@@ -18,13 +19,13 @@ function createStore<S, A>(
   DispatchContext.displayName = `${name}.DispatchContext`;
 
   const StoreProvider: React.FunctionComponent<IStoreProps<S, A>> = ({
-    defaultState,
+    defaultState: initialState = defaultState,
     onDispatch,
     children
   }) => {
     const [state, baseDispatch] = React.useReducer<React.Reducer<S, A>>(
       reducer,
-      defaultState
+      initialState
     );
 
     const dispatch: React.Dispatch<A> = React.useCallback(

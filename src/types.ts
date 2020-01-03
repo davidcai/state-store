@@ -1,4 +1,4 @@
 export interface IStoreProps<S, A> {
-  defaultState: S;
+  defaultState?: S;
   onDispatch?: (action: A) => void;
 }
