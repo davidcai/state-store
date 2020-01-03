@@ -1,13 +1,19 @@
 module.exports = {
-  collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx}"],
   coverageReporters: ["text", "html"],
+  coverageThreshold: {
+    global: {
+      statements: 70,
+      branches: 70,
+      functions: 70,
+      lines: 70
+    }
+  },
   globals: {
     "ts-jest": {
       tsConfig: "tsconfig.json"
     }
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
-  // testRegex: "src/.*(\\.|/)(test|spec)\\.(jsx?|tsx?)$",
   transform: {
     "^.+\\.(ts|tsx)$": "ts-jest"
   }
