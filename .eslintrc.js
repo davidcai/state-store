@@ -36,10 +36,13 @@ module.exports = {
     "@typescript-eslint/interface-name-prefix": [ERROR, "always"],
     "@typescript-eslint/no-explicit-any": OFF,
     "@typescript-eslint/no-non-null-assertion": OFF,
-    "@typescript-eslint/no-object-literal-type-assertion": OFF,
     "@typescript-eslint/no-unused-vars": ERROR,
-    "class-methods-use-this": OFF,
     "import/default": OFF,
+    "import/extensions": [
+      ERROR,
+      "always",
+      { js: "never", jsx: "never", ts: "never", tsx: "never" }
+    ],
     "import/no-extraneous-dependencies": OFF,
     "import/no-unresolved": ERROR,
     "import/order": [ERROR, { "newlines-between": "always" }],

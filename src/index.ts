@@ -1,23 +1,5 @@
-interface IDoable {
-  canDo: boolean;
-}
+import * as Types from "./types";
 
-class Doable implements IDoable {
-  canDo: boolean;
+export type IStoreProps<S, A> = Types.IStoreProps<S, A>;
 
-  constructor(canDo: boolean) {
-    this.canDo = canDo;
-  }
-
-  doIt() {
-    if (this.canDo) {
-      // eslint-disable-next-line
-      console.log("Did it");
-    } else {
-      // eslint-disable-next-line
-      console.log("Can't do");
-    }
-  }
-}
-
-export default new Doable(true);
+export { createStore } from "./create-store";
