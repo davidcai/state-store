@@ -2,7 +2,7 @@
   "name": "state-store",
   "version": "1.0.0",
   "description": "React state store",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "run-s lint tsc",
     "watch": "tsc -w",
@@ -16,6 +16,8 @@
     "react": ">=16.8.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
     "@types/jest": "^24.0.25",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
