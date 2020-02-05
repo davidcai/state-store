@@ -1,4 +1,3 @@
-// TODO
 import "@testing-library/jest-dom/extend-expect";
 
 import { createReducer } from "../src/create-reducer";
