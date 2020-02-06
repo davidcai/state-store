@@ -12,12 +12,12 @@ const defaultState: IStoreState = {
   count: 0
 };
 
-/* eslint-disable no-param-reassign,operator-assignment,@typescript-eslint/ban-ts-ignore */
+/* eslint-disable @typescript-eslint/ban-ts-ignore */
 describe(".createReducer()", () => {
   const reducer = createReducer<IStoreState, Action>({
-    INCREMENT: (draft, action) => {
-      draft.count = draft.count + action.by;
-    }
+    INCREMENT: (state, action) => ({
+      count: state.count + action.by
+    })
   });
 
   it("should produce reducer function", () => {
