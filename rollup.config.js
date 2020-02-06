@@ -14,6 +14,6 @@ export default {
       sourcemap: true
     }
   ],
-  external: ["react", "immer"],
+  external: ["react"],
   plugins: [typescript()]
 };
